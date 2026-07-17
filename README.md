@@ -28,8 +28,8 @@ Al ejecutarse, Ansible se conecta por SSH a los 5 contenedores y de forma autom√
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/TU_USUARIO/TU_REPOSITORIO.git](https://github.com/TU_USUARIO/TU_REPOSITORIO.git)
-   cd TU_REPOSITORIO
+   git clone https://github.com/AliaJimenez/ubuntu-server-automation
+   cd ubuntu-server-automation
    ```
 2. Levantar los servidores con Docker:
   ```bash
