@@ -1,0 +1,33 @@
+---
+- name: Automatización de servidores Ubuntu
+  hosts: servidores
+  become: yes
+  tasks:
+    - name: 1. Actualizar los paquetes de APT del sistema operativo
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: 2. Crear el usuario itla
+      user:
+        name: itla
+        state: present
+        create_home: yes
+
+    - name: 3. Crear una carpeta llamada "app" en la raiz
+      file:
+        path: /app
+        state: directory
+        mode: '0755'
+
+    - name: 4. Crear un archivo hola.txt en la carpeta app
+      copy:
+        dest: /app/hola.txt
+        content: "¡Hola! La automatización fue un éxito.\n"
+
+    - name: 5. Instalar la aplicacion cowsay y htop
+      apt:
+        name:
+          - cowsay
+          - htop
+        state: present
