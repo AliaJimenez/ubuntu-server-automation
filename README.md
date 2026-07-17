@@ -31,14 +31,14 @@ Al ejecutarse, Ansible se conecta por SSH a los 5 contenedores y de forma autom�
    git clone https://github.com/AliaJimenez/ubuntu-server-automation
    cd ubuntu-server-automation
    ```
-2. Levantar los servidores con Docker:
+2. **Levantar los servidores con Docker:**
   ```bash
   docker compose up -d --build
-```
-3. Ejecutar la automatización con Ansible (desde WSL/Linux):
+  ```
+3. **Ejecutar la automatización con Ansible (desde WSL/Linux):**
   ```bash
   ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i inventario.ini playbook.yml
-```
-4. Apagar y limpiar el entorno (cuando termines):
+  ```
+4. **Apagar y limpiar el entorno (cuando termines):**
   ```bash
   docker compose down
