@@ -1,6 +1,8 @@
 # 🤖 Automatización de Servidores con Ansible y Docker
 
-Este repositorio contiene un laboratorio práctico de infraestructura como código (IaC). El objetivo principal del proyecto es crear un entorno de 5 servidores virtuales utilizando **Docker** y automatizar su configuración simultánea utilizando **Ansible**.
+**EN** — Infrastructure-as-Code lab: Docker Compose spins up five Ubuntu servers with SSH, and a single Ansible playbook configures all of them at once — package updates, a new user, an `/app` directory with a test file, and the installation of `cowsay` and `htop`.
+
+**ES** — Este repositorio contiene un laboratorio práctico de infraestructura como código (IaC). El objetivo principal del proyecto es crear un entorno de 5 servidores virtuales utilizando **Docker** y automatizar su configuración simultánea utilizando **Ansible**.
 
 Es un proyecto ideal para demostrar habilidades de administración de sistemas, configuración automatizada y manejo de contenedores. Práctica desarrollada para el Instituto Tecnológico de Las Américas (ITLA).
 
@@ -42,3 +44,10 @@ Al ejecutarse, Ansible se conecta por SSH a los 5 contenedores y de forma autom�
 4. **Apagar y limpiar el entorno (cuando termines):**
   ```bash
   docker compose down
+  ```
+
+> `inventario.ini` uses lab-only credentials (`ansible`/`ansible`) for the local containers. · Credenciales solo para el laboratorio local.
+
+## 👩‍💻 Author · Autora
+
+**Aliandy Jimenez** — [@AliaJimenez](https://github.com/AliaJimenez)
